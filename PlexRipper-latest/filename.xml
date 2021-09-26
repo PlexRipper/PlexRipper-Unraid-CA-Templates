@@ -13,7 +13,7 @@
   <Category>Backup: Downloaders: MediaApp:Video MediaApp:Music MediaApp:Photos MediaApp:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:7000]/</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/PlexRipper/PlexRipper/master/src/WebAPI/ClientApp/src/assets/img/logo/full-logo-256.png</Icon>
+  <Icon>https://raw.githubusercontent.com/PlexRipper/PlexRipper/master/export/plexripper/logo/full/full-logo-256.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

@@ -9,11 +9,11 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://github.com/PlexRipper/PlexRipper/</Project>
-  <Overview>Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!</Overview>
+  <Overview>DEVELOPMENT BUILD - Latest changes are made here! Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!</Overview>
   <Category>Backup: Downloaders: MediaApp:Video MediaApp:Music MediaApp:Photos MediaApp:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:7000]/</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/PlexRipper/PlexRipper/master/src/WebAPI/ClientApp/src/assets/img/logo/full-logo-256.png</Icon>
+  <Icon>https://raw.githubusercontent.com/PlexRipper/PlexRipper/master/export/plexripper/logo/full/full-logo-256.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
