@@ -1,63 +1,74 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>PlexRipper</Name>
-  <Repository>plexripper/plexripper:latest</Repository>
-  <Registry>https://hub.docker.com/r/plexripper/plexripper/</Registry>
-  <Network>bridge</Network>
-  <MyIP/>
-  <Shell>sh</Shell>
-  <Privileged>false</Privileged>
-  <Support/>
-  <Project>https://github.com/PlexRipper/PlexRipper/</Project>
-  <Overview>Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!</Overview>
-  <Category>Backup: Downloaders: MediaApp:Video MediaApp:Music MediaApp:Photos MediaApp:Other Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:7000]/</WebUI>
-  <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/PlexRipper/PlexRipper/master/export/plexripper/logo/full/full-logo-256.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1608413914</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Description>Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>7000</HostPort>
-        <ContainerPort>7000</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/downloads</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/movies</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/tvshows</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
-  <Labels/>
-  <Config Name="Host Port" Target="7000" Default="7000" Mode="tcp" Description="Container Port: 7000" Type="Port" Display="always" Required="true" Mask="false">7000</Config>
-  <Config Name="Config Directory" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Download Folder" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Movie Destination Folder" Target="/movies" Default="" Mode="rw" Description="Container Path: /movies" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="TV-Show Destination Folder" Target="/tvshows" Default="" Mode="rw" Description="Container Path: /tvshows" Type="Path" Display="always" Required="true" Mask="false"/>
+	<Name>PlexRipper</Name>
+	<Repository>plexripper/plexripper:latest</Repository>
+	<Registry>https://hub.docker.com/r/plexripper/plexripper/</Registry>
+	<Network>bridge</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support>https://github.com/PlexRipper/PlexRipper/issues</Support>
+	<Project>https://github.com/PlexRipper/PlexRipper/</Project>
+	<Overview>Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!</Overview>
+	<Category>Backup: Downloaders: MediaApp:Video MediaApp:Music MediaApp:Photos MediaApp:Other Status:Beta</Category>
+	<WebUI>http://[IP]:[PORT:7000]/</WebUI>
+	<TemplateURL/>
+	<Icon>https://raw.githubusercontent.com/PlexRipper/PlexRipper/master/export/plexripper/logo/full/full-logo-256.png</Icon>
+	<ExtraParams/>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled>1608413914</DateInstalled>
+	<DonateText/>
+	<DonateLink/>
+	<Description>Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!</Description>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>7000</HostPort>
+				<ContainerPort>7000</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir/>
+			<ContainerDir>/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir/>
+			<ContainerDir>/downloads</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir/>
+			<ContainerDir>/movies</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir/>
+			<ContainerDir>/tvshows</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Environment>
+		<Variable>
+			<Value>99</Value>
+			<Name>PUID</Name>
+			<Mode/>
+		</Variable>
+		<Variable>
+			<Value>100</Value>
+			<Name>PGID</Name>
+			<Mode/>
+		</Variable>
+	</Environment>
+	<Labels/>
+	<Config Name="Host Port" Target="7000" Default="7000" Mode="tcp" Description="Container Port: 7000" Type="Port" Display="always" Required="true" Mask="false">7000</Config>
+	<Config Name="Config Directory" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+	<Config Name="Download Folder" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false"/>
+	<Config Name="Movie Destination Folder" Target="/movies" Default="" Mode="rw" Description="Container Path: /movies" Type="Path" Display="always" Required="true" Mask="false"/>
+	<Config Name="TV-Show Destination Folder" Target="/tvshows" Default="" Mode="rw" Description="Container Path: /tvshows" Type="Path" Display="always" Required="true" Mask="false"/>
 </Container>
