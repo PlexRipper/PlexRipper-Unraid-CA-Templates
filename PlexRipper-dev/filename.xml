@@ -8,8 +8,10 @@
 	<Shell>sh</Shell>
 	<Privileged>false</Privileged>
 	<Support>https://github.com/PlexRipper/PlexRipper/issues</Support>
-	<Project>https://github.com/PlexRipper/PlexRipper/</Project>
-	<Overview>DEVELOPMENT BUILD - Latest changes are made here! Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!</Overview>
+	<Project>https://plexripper.rocks</Project>
+	<Overview>DEVELOPMENT BUILD - Latest changes are made here! Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!
+	Visit www.plexripper.rocks for more info!
+	</Overview>
 	<Category>Backup: Downloaders: MediaApp:Video MediaApp:Music MediaApp:Photos MediaApp:Other Status:Beta</Category>
 	<WebUI>http://[IP]:[PORT:7000]/</WebUI>
 	<TemplateURL/>
@@ -17,7 +19,7 @@
 	<ExtraParams/>
 	<PostArgs/>
 	<CPUset/>
-	<Date>2022-08-20</Date>
+	<Date>2022-11-29</Date>
 	<DateInstalled>1608413914</DateInstalled>
 	<DonateText/>
 	<DonateLink/>
