@@ -1,29 +1,37 @@
 <?xml version="1.0"?>
 <Container version="2">
 	<Name>PlexRipper</Name>
-	<Repository>plexripper/plexripper:latest</Repository>
+	<Repository>plexripper/plexripper</Repository>
 	<Registry>https://hub.docker.com/r/plexripper/plexripper/</Registry>
 	<Network>bridge</Network>
 	<MyIP/>
 	<Shell>sh</Shell>
 	<Privileged>false</Privileged>
 	<Support>https://github.com/PlexRipper/PlexRipper/issues</Support>
+	<GitHub>https://github.com/PlexRipper/PlexRipper/</GitHub>
+	<ReadMe>https://github.com/PlexRipper/PlexRipper/#readme</ReadMe>
+	<Branch>
+		<Tag>latest</Tag>
+		<TagDescription>Stable PlexRipper releases</TagDescription>
+	</Branch>
+	<Branch>
+		<Tag>dev</Tag>
+		<TagDescription>Development PlexRipper releases (may include experimental features or bugs)</TagDescription>
+	</Branch>
 	<Project>https://plexripper.rocks</Project>
-	<Overview>Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!</Overview>
+	<Overview>A cross-platform Plex media downloader that seamlessly adds media from other Plex servers to your own!</Overview>
 	<Category>Backup: Downloaders: MediaApp:Video MediaApp:Music MediaApp:Photos MediaApp:Other Status:Beta</Category>
 	<WebUI>http://[IP]:[PORT:7000]/</WebUI>
-	<TemplateURL/>
+	<TemplateURL>https://raw.githubusercontent.com/PlexRipper/PlexRipper-Unraid-CA-Templates/refs/heads/master/PlexRipper-latest/filename.xml</TemplateURL>
 	<Icon>https://raw.githubusercontent.com/PlexRipper/PlexRipper/master/export/plexripper/logo/full/full-logo-256.png</Icon>
 	<ExtraParams/>
 	<PostArgs/>
 	<CPUset/>
-	<Date>2022-11-29</Date>
+	<Date>2025-01-19</Date>
 	<DateInstalled>1608413914</DateInstalled>
 	<DonateText/>
 	<DonateLink/>
-	<Description>Tired of searching for media on different torrent websites or paying for Usenet server access? Well look no further! You can now use PlexRipper to download "everything" from the Plex servers you have access to and expand your collection that way! Let others collect media for you and then just download everything!
-	Visit www.plexripper.rocks for more info!
-	</Description>
+	<Description>A cross-platform Plex media downloader that seamlessly adds media from other Plex servers to your own!	Visit www.plexripper.rocks for more info!</Description>
 	<Networking>
 		<Mode>bridge</Mode>
 		<Publish>
@@ -74,9 +82,11 @@
 	<Config Name="Download Folder (Container Path: /Downloads)" Target="/Downloads" Default="" Mode="rw" Description="All in progress downloads will be temporarily stored here" Type="Path" Display="always" Required="true" Mask="false"/>
 	<Config Name="Movie Destination Folder (Container Path: /Movies)" Target="/Movies" Default="" Mode="rw" Description="Default folder for Movies that have finished downloading" Type="Path" Display="always" Required="true" Mask="false"/>
 	<Config Name="Tv-Show Destination Folder (Container Path: /TvShows)" Target="/TvShows" Default="" Mode="rw" Description="Default folder for TvShows that have finished downloading" Type="Path" Display="always" Required="true" Mask="false"/>
-	<Config Name="Music Destination Folder (Container Path: /Music)" Target="/Music" Default="" Mode="rw" Description="Default folder for Music that have finished downloading" Type="Path" Display="always" Required="false" Mask="false"/>
-	<Config Name="Photos Destination Folder (Container Path: /Photos)" Target="/Photos" Default="" Mode="rw" Description="Default folder for Music that have finished downloading" Type="Path" Display="always" Required="false" Mask="false"/>
-	<Config Name="Other Destination Folder (Container Path: /Other)" Target="/Other" Default="" Mode="rw" Description="Default folder for unknown media that have finished downloading" Type="Path" Display="always" Required="false" Mask="false"/>
+	<Config Name="Music Destination Folder (Container Path: /Music)" Target="/Music" Default="" Mode="rw" Description="(NOT IN USE YET) Default folder for Music that have finished downloading" Type="Path" Display="always" Required="false" Mask="false"/>
+	<Config Name="Photos Destination Folder (Container Path: /Photos)" Target="/Photos" Default="" Mode="rw" Description="(NOT IN USE YET) Default folder for Music that have finished downloading" Type="Path" Display="always" Required="false" Mask="false"/>
+	<Config Name="Other Destination Folder (Container Path: /Other)" Target="/Other" Default="" Mode="rw" Description="(NOT IN USE YET) Default folder for unknown media that have finished downloading" Type="Path" Display="always" Required="false" Mask="false"/>
 	<Config Name="PUID" Target="PUID" Default="99" Mode="" Description="UserID which is used for setting file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
 	<Config Name="PGID" Target="PGID" Default="100" Mode="" Description="GroupID which is used for setting file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+	<Config Name="UNMASKED" Target="UNMASKED" Default="false" Mode="" Description="Unmask sensitive data in logs if true" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+	<Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="DEBUG" Mode="" Description="Set the minimum logging level to show in the docker container, [VERBOSE | DEBUG | INFORMATION | WARNING | ERROR | FATAL]" Type="Variable" Display="advanced" Required="false" Mask="false">DEBUG</Config>
 </Container>
